@@ -1,33 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scrollAddHabit"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="16dp">
 
-    <LinearLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Habit Name"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/habitNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:hint="Enter habit name" />
 
-        <EditText
-            android:id="@+id/editHabitName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Habit Name" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Last Completed Date"
+        android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editHabitDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Description"
-            android:layout_marginTop="12dp" />
+    <EditText
+        android:id="@+id/lastCompletedDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter date (YYYY-MM-DD)" />
 
-        <Button
-            android:id="@+id/btnSaveHabit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Save Habit"
-            android:layout_marginTop="24dp" />
-    </LinearLayout>
-</ScrollView>
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Save Habit" />
+
+</LinearLayout>
