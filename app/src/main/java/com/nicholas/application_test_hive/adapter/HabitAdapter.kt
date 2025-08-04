@@ -29,8 +29,7 @@ class HabitAdapter(
         fun bind(habit: Habit) {
             Log.d("HabitAdapter", "Binding habit: ${habit.name} with date: ${habit.lastCompletedDate}")
             binding.habitName.text = habit.name
-            // We removed the description from the data class, so we remove this line
-            // binding.habitDescription.text = habit.description
+
             binding.lastCompletedDate.text = habit.lastCompletedDate
 
             binding.markAsDoneButton.setOnClickListener {
